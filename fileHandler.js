@@ -6,7 +6,7 @@ function readFile() {
     return new Promise((resolve, reject) => {
         fs.readFile(MOVIES_FILE, 'utf8', (err, data) => {
             if (err) {
-                if (err.code === 'ENOENT') { // Return an empty array if the file doesn't exist yet
+                if (err.code === 'ENOENT') { 
                     resolve([]);
                 } else {
                     reject(err);
